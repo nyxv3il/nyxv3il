@@ -27,14 +27,14 @@ function Sections() {
 
   return (
     <main>
-      <section className="landing">
+      <section id="home" className="landing">
         <img src={pfp} alt="PFP" />
         <h1>{data.name}</h1>
         <h3>{data.role}</h3>
       </section>
       <section id="about">
         <h1 className="sectionTitle">ABOUT ME</h1>
-        <h3>
+        <h3 style={{ userSelect: "text" }}>
           I go by the name {data.name}. I'm a{" "}
           {new Date().getFullYear() - data.birth}
           -year-old with a strong passion for technology. I work as a Full-Stack

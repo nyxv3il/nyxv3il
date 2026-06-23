@@ -3,7 +3,7 @@ import pfp from "../assets/pfp.jpeg";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [active, setActive] = useState("#");
+  const [active, setActive] = useState("#home");
   const [menuExpanded, setMenuExpanded] = useState(false);
 
   return (
@@ -14,10 +14,10 @@ export default function Navbar() {
       </div>
       <div className={`navList ${menuExpanded ? "expanded" : ""}`}>
         <a
-          className={`action navLink ${active === "#" ? "active" : ""}`}
-          href="#"
+          className={`action navLink ${active === "#home" ? "active" : ""}`}
+          href="#home"
           onClick={() => {
-            setActive("#");
+            setActive("#home");
           }}
         >
           HOME
