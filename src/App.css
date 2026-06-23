@@ -1,0 +1,13 @@
+.appMain {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - var(--navbar-height));
+  background: #222;
+  justify-content: center;
+  align-items: center;
+}
+
+.appTitle {
+  color: #fff;
+  font-family: "Montserrat Variable";
+}
