@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.tsx";
 import Navbar from "./components/Navbar.tsx";
 import "@fontsource-variable/montserrat";
+import "@fontsource-variable/jetbrains-mono";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

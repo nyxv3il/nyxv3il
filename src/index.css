@@ -4,7 +4,6 @@
   margin: 0;
   border: none;
   outline: none;
-  font-family: "Montserrat Variable";
   user-select: none;
 }
 
@@ -16,6 +15,7 @@
 
 :root {
   --primary: #1c0048;
+  --secondary: #2a0566;
   --light: #e0aaff;
   --dark: #c77dff;
   --paw: #ffc258;

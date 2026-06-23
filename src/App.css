@@ -1,13 +1,45 @@
-.appMain {
+main {
   display: flex;
   width: 100%;
   height: calc(100vh - var(--navbar-height));
-  background: #222;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(-45deg, var(--primary), var(--secondary));
+  padding: 0 2rem 0 2rem;
 }
 
-.appTitle {
-  color: #fff;
-  font-family: "Montserrat Variable";
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.landing {
+  justify-content: center;
+  align-items: center;
+  font-family: "JetBrains Mono Variable", monospace;
+}
+
+.landing img {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  border: solid 6px var(--dark);
+  box-shadow: var(--light) 0 0 15px 0;
+  margin-bottom: 4rem;
+}
+
+.landing h1 {
+  font-size: 4rem;
+  color: var(--light);
+  text-shadow: var(--dark) 0 0 10px;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.landing h3 {
+  color: var(--light);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
 }
