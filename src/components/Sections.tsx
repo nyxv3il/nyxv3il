@@ -5,8 +5,14 @@ import "./Sections.css";
 const dataFile =
   "https://gist.githubusercontent.com/nyxv3il/f21d4603534c6ff57d4a35325e073923/raw/3ca721ee7b73f22d7aca650c4ab7b842335873f4/gistfile1.txt";
 
+type ProfileData = {
+  name: string;
+  role: string;
+  birth: number;
+};
+
 function Sections() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<ProfileData | null>(null);
   const [err, setErr] = useState(null);
 
   useEffect(() => {
