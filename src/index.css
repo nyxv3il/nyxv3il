@@ -15,7 +15,7 @@
 
 :root {
   --primary: #1c0048;
-  --secondary: #2a0566;
+  --secondary: #3c096c;
   --light: #e0aaff;
   --dark: #c77dff;
   --paw: #ffc258;
@@ -25,13 +25,6 @@
 html,
 body {
   font-size: 12px;
-}
-
-@media screen and (max-width: 1366px) {
-  html,
-  body {
-    font-size: 10px;
-  }
 }
 
 @media screen and (max-width: 968px) {
