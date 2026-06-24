@@ -1,42 +1,18 @@
-import { useEffect, useState } from "react";
 import pfp from "../assets/pfp.jpeg";
 import "./Sections.css";
 
-const dataFile =
-  "https://gist.githubusercontent.com/nyxv3il/f21d4603534c6ff57d4a35325e073923/raw/3ca721ee7b73f22d7aca650c4ab7b842335873f4/gistfile1.txt";
-
-type ProfileData = {
-  name: string;
-  role: string;
-  birth: number;
-};
-
 function Sections() {
-  const [data, setData] = useState<ProfileData | null>(null);
-  const [err, setErr] = useState(null);
-
-  useEffect(() => {
-    fetch(dataFile)
-      .then((res) => res.json())
-      .then((jsonData) => setData(jsonData))
-      .catch((error) => setErr(error.message ?? "Unknown error"));
-  }, []);
-
-  if (err) return <div>Error: {err}</div>;
-  if (!data) return <div>Loading...</div>;
-
   return (
     <main>
       <section id="home" className="landing">
         <img src={pfp} alt="PFP" />
-        <h1>{data.name}</h1>
-        <h3>{data.role}</h3>
+        <h1>NYXV3IL</h1>
+        <h3>Full-Stack Developer, Cyber Security Student</h3>
       </section>
       <section id="about">
         <h1 className="sectionTitle">ABOUT ME</h1>
         <h3 style={{ userSelect: "text" }}>
-          I go by the name {data.name}. I'm a{" "}
-          {new Date().getFullYear() - data.birth}
+          I go by the name NYXV3IL. I'm a {new Date().getFullYear() - 2008}
           -year-old with a strong passion for technology. I work as a Full-Stack
           developer and a Cyber Security student, and I am steadily growing in
           the field of Cyber Security. My journey began at the age of 13 when I
