@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import pfp from "../assets/pfp.jpeg";
 import { useState } from "react";
+import data from "../assets/data.json";
 
 export default function Navbar() {
   const [active, setActive] = useState("#home");
@@ -10,45 +11,18 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo">
         <img src={pfp} alt="PFP" />
-        <h1>NYXV3IL</h1>
+        <h1>{data.name}</h1>
       </div>
       <div className={`navList ${menuExpanded ? "expanded" : ""}`}>
-        <a
-          className={`action navLink ${active === "#home" ? "active" : ""}`}
-          href="#home"
-          onClick={() => {
-            setActive("#home");
-          }}
-        >
-          HOME
-        </a>
-        <a
-          className={`action navLink ${active === "#about" ? "active" : ""}`}
-          href="#about"
-          onClick={() => {
-            setActive("#about");
-          }}
-        >
-          ABOUT
-        </a>
-        <a
-          className={`action navLink ${active === "#skills" ? "active" : ""}`}
-          href="#skills"
-          onClick={() => {
-            setActive("#skills");
-          }}
-        >
-          SKILLS
-        </a>
-        <a
-          className={`action navLink ${active === "#projects" ? "active" : ""}`}
-          href="#projects"
-          onClick={() => {
-            setActive("#projects");
-          }}
-        >
-          PROJECTS
-        </a>
+        {data.navLinks.map(({ name, target }) => (
+          <a
+            className={`action navLink ${active === target ? "active" : ""}`}
+            href={target}
+            onClick={() => setActive(target)}
+          >
+            {name}
+          </a>
+        ))}
       </div>
       <div
         onClick={() => {
