@@ -1,0 +1,55 @@
+#projects {
+  margin-top: 15rem;
+}
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  height: auto;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  color: var(--light);
+}
+
+.card h3 {
+  color: var(--light);
+  font-family: "Montserrat Variable";
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--light);
+  font-size: 1.3rem;
+  line-height: 2rem;
+  text-align: justify;
+  font-family: "JetBrains Mono Variable";
+  margin-bottom: 1rem;
+}
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--light);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: "Montserrat Variable";
+  margin-top: 2rem;
+}
+
+.card a:hover {
+  color: var(--dark);
+}

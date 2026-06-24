@@ -1,21 +1,21 @@
 import "./Navbar.css";
-import pfp from "../assets/pfp.jpeg";
 import { useState } from "react";
-import data from "../assets/data.json";
+import type { Props } from "../App";
 
-export default function Navbar() {
+export default function Navbar({ data }: Props) {
   const [active, setActive] = useState("#home");
   const [menuExpanded, setMenuExpanded] = useState(false);
 
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={pfp} alt="PFP" />
-        <h1>{data.name}</h1>
+        <img src={data.userData?.avatar_url ?? ""} alt="PFP" />
+        <h1>{data.userData?.login.toUpperCase()}</h1>
       </div>
       <div className={`navList ${menuExpanded ? "expanded" : ""}`}>
-        {data.navLinks.map(({ name, target }) => (
+        {data.siteData?.navLinks?.map(({ name, target }) => (
           <a
+            key={target}
             className={`action navLink ${active === target ? "active" : ""}`}
             href={target}
             onClick={() => setActive(target)}

@@ -30,46 +30,7 @@ section {
   flex-direction: column;
   width: 100%;
   z-index: 1;
-}
 
-.landing {
-  justify-content: center;
-  min-height: calc(100vh - var(--navbar-height));
-  align-items: center;
-  font-family: "JetBrains Mono Variable", monospace;
-}
-
-.landing img {
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-  border: solid 6px var(--dark);
-  box-shadow: var(--light) 0 0 15px 0;
-  margin-bottom: 4rem;
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.landing img:hover {
-  transform: scale(1.05);
-}
-
-.landing h1 {
-  font-size: 5rem;
-  color: var(--light);
-  text-shadow: var(--dark) 0 0 10px;
-  margin-bottom: 1rem;
-  font-weight: 800;
-}
-
-.landing h3 {
-  color: var(--light);
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: center;
-}
-
-#about {
   align-items: center;
 }
 
@@ -86,7 +47,7 @@ section {
 .sectionTitle::after {
   content: "";
   position: absolute;
-  top: 5rem;
+  top: 6rem;
   left: 50%;
   transform: translate(-50%);
   background: var(--dark);
@@ -95,29 +56,7 @@ section {
   width: 1rem;
 }
 
-#about h3 {
-  color: var(--light);
-  font-family: "JetBrains Mono Variable";
-  font-weight: 400;
-  line-height: 3.5rem;
-  font-size: 2rem;
-  text-align: justify;
-  margin-bottom: 2rem;
-}
-
-#about p {
-  font-family: "JetBrains Mono Variable";
-  font-weight: 200;
-  font-size: 1.5rem;
-  color: var(--dark);
-}
-
-#skills {
-  align-items: center;
-  margin-top: 15rem;
-}
-
-#skills .cards {
+.cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -125,7 +64,7 @@ section {
   width: 100%;
 }
 
-#skills .card {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,7 +75,6 @@ section {
   border: var(--border) solid 3px;
   box-shadow: var(--shadow) 0 0 5px 0;
   width: 30rem;
-  height: 18rem;
   transition:
     transform 0.3s ease-in-out,
     border 0.3s ease-in-out,
@@ -145,22 +83,14 @@ section {
   padding: 2rem;
 }
 
-#skills .card:hover {
+.card:hover {
   transform: scale(1.05);
   border: var(--dark) solid 3px;
   box-shadow: var(--dark) 0 0 5px 0;
   background: var(--secondary);
 }
 
-#skills .card h3 {
-  color: var(--light);
-  font-family: "Montserrat Variable";
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-#skills .tags > span {
+.tag {
   font-family: "JetBrains Mono Variable";
   color: var(--light);
   font-size: 1.2rem;
@@ -168,12 +98,4 @@ section {
   padding: 0.2rem 1rem;
   border-radius: 50px;
   box-shadow: var(--shadow) 0 2px 3px 0;
-}
-
-#skills .tags {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
 }

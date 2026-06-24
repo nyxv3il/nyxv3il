@@ -1,0 +1,23 @@
+#skills {
+  margin-top: 15rem;
+}
+
+#skills .card {
+  height: 20rem;
+}
+
+#skills .card h3 {
+  color: var(--light);
+  font-family: "Montserrat Variable";
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#skills .tags {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

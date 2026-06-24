@@ -1,0 +1,22 @@
+#about h3 {
+  color: var(--light);
+  font-family: "JetBrains Mono Variable";
+  font-weight: 400;
+  line-height: 3.5rem;
+  font-size: 2rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+#about p {
+  font-family: "JetBrains Mono Variable";
+  font-weight: 200;
+  font-size: 1.5rem;
+  color: var(--dark);
+  text-align: center;
+}
+
+#about p a {
+  color: var(--light);
+  font-weight: 300;
+}
