@@ -1,0 +1,21 @@
+main {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.buffer {
+  font-size: 10rem;
+  color: var(--light);
+  animation: rotate 1s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

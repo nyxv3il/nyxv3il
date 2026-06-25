@@ -16,27 +16,24 @@ export default function Footer({ data }: Props) {
         >
           <FontAwesomeIcon icon={faGithub} /> GitHub
         </div>
-        <div className="socialTag action">
-          <FontAwesomeIcon
-            icon={faShield}
-            onClick={() => {
-              open(data.siteData?.thm);
-            }}
-          />{" "}
-          TryHackMe
+        <div
+          className="socialTag action"
+          onClick={() => {
+            open("https://tryhackme.com/p/nyxv3il");
+          }}
+        >
+          <FontAwesomeIcon icon={faShield} /> TryHackMe
         </div>
-        <div className="socialTag action">
-          <FontAwesomeIcon
-            icon={faDiscord}
-            onClick={() => {
-              if (data.siteData?.discord) {
-                navigator.clipboard.writeText(data.siteData.discord);
-                alert("Discord username copied to clipboard.");
-              } else {
-                alert("Something went wrong getting the discord username");
-              }
-            }}
-          />
+        <div
+          className="socialTag action"
+          onClick={() => {
+            if (data.siteData?.discord) {
+              navigator.clipboard.writeText(data.siteData.discord);
+              alert("Discord username copied to clipboard");
+            } else alert("Something went wrong fetching discord username");
+          }}
+        >
+          <FontAwesomeIcon icon={faDiscord} />
           Discord
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Sections from "./components/Sections";
+import Loading from "./components/Loading";
 
 export type USER = {
   avatar_url: string;
@@ -52,7 +53,7 @@ export default function App() {
   const [error, setError] = useState<string | null>(null);
 
   const siteDataFile =
-    "https://gist.githubusercontent.com/nyxv3il/38d92f277aabd696f0c507ab880cf617/raw/a938824eb2cb3188c438f7477e020f17fbd01062/nyxv3il.com%2520user%2520data";
+    "https://gist.githubusercontent.com/nyxv3il/38d92f277aabd696f0c507ab880cf617/raw/7d8609d57181371efcc85423562a82c22111f5e5/fadsfdsa";
 
   useEffect(() => {
     Promise.all([
@@ -83,10 +84,13 @@ export default function App() {
   const data = { siteData, userData, repos };
 
   if (error) return <h1>Error: {error}</h1>;
-  if (loading) return <h1>Loading...</h1>;
+  if (loading) return <Loading />;
 
   return (
     <>
+      <head>
+        <link rel="icon" href={data.userData?.avatar_url} type="image/png" />
+      </head>
       <Navbar data={data} />
       <Sections data={data} />
     </>
