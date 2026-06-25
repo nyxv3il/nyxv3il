@@ -3,7 +3,7 @@ import "./Loading.css";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 export default function Loading() {
   return (
-    <main>
+    <main id="loading">
       <FontAwesomeIcon icon={faCircleNotch} className="buffer" />
     </main>
   );
