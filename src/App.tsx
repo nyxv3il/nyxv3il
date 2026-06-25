@@ -5,6 +5,7 @@ import Sections from "./components/Sections";
 export type USER = {
   avatar_url: string;
   login: string;
+  html_url: string;
 };
 
 export type NavLink = {
@@ -22,6 +23,8 @@ export type SiteData = {
   birth: number;
   navLinks: NavLink[];
   skills: Skill[];
+  thm: string;
+  discord: string;
 };
 
 export type REPO = {

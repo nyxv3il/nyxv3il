@@ -1,0 +1,50 @@
+footer {
+  background: var(--primary);
+  display: flex;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow) 0 1rem 1rem;
+  border-radius: 1rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.socialTag {
+  color: var(--light);
+  font-family: "JetBrains Mono Variable";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  background: var(--card);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow) 0 5px 5px;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
+  font-weight: 600;
+}
+
+.socialTag:hover {
+  transform: scale(1.1);
+}
+
+footer p {
+  color: var(--dark);
+  font-family: "Montserrat Variable";
+  font-size: 1rem;
+  font-weight: 500;
+}

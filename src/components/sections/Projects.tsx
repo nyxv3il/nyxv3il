@@ -17,7 +17,7 @@ export default function Projects({ data }: Props) {
             </div>
             <p>{description}</p>
             {language ? <span className="tag">{language}</span> : null}
-            <a href={html_url} target="_blank">
+            <a className="action" href={html_url} target="_blank">
               View on GitHub
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </a>
