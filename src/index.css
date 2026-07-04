@@ -4,7 +4,11 @@
   margin: 0;
   border: none;
   outline: none;
-  user-select: none;
+  user-select: text;
+}
+
+*::selection {
+  background: var(--selection);
 }
 
 .action {
@@ -22,6 +26,7 @@
   --shadow: #0d0120;
   --card: #2d055259;
   --border: #4810a1;
+  --selection: #e0aaff3d;
   --navbar-height: 7rem;
 }
 

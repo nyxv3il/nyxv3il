@@ -9,7 +9,7 @@ export default function About({ data }: Props) {
   return (
     <section id="about">
       <h1 className="sectionTitle">ABOUT ME</h1>
-      <h3 style={{ userSelect: "text" }}>
+      <h3>
         I go by the name {data.userData?.login.toUpperCase()}. I'm a {age}
         -year-old with a strong passion for technology. I work as a Full-Stack
         Developer and a Cyber Security student, And I am steadily growing in the
