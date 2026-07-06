@@ -101,7 +101,10 @@ export default function App() {
           property="og:description"
           content="Portfolio website for NYXV3IL"
         />
-        <meta property="og:image" content={data.userData?.avatar_url} />
+        <meta
+          property="og:image"
+          content="https://avatars.githubusercontent.com/u/83386286?v=4"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://nyxv3il.com/" />
@@ -110,7 +113,10 @@ export default function App() {
           property="twitter:description"
           content="Portfolio website for NYXV3IL"
         />
-        <meta property="twitter:image" content={data.userData?.avatar_url} />
+        <meta
+          property="twitter:image"
+          content="https://avatars.githubusercontent.com/u/83386286?v=4"
+        />
       </head>
       <Navbar data={data} />
       <Sections data={data} />
