@@ -90,6 +90,27 @@ export default function App() {
     <>
       <head>
         <link rel="icon" href={data.userData?.avatar_url} type="image/png" />
+        <title>NYXV3IL</title>
+        <meta name="title" content="NYXV3IL" />
+        <meta name="description" content="Portfolio website for NYXV3IL" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nyxv3il.com/" />
+        <meta property="og:title" content="NYXV3IL" />
+        <meta
+          property="og:description"
+          content="Portfolio website for NYXV3IL"
+        />
+        <meta property="og:image" content={data.userData?.avatar_url} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://nyxv3il.com/" />
+        <meta property="twitter:title" content="NYXV3IL" />
+        <meta
+          property="twitter:description"
+          content="Portfolio website for NYXV3IL"
+        />
+        <meta property="twitter:image" content={data.userData?.avatar_url} />
       </head>
       <Navbar data={data} />
       <Sections data={data} />
