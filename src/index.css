@@ -42,9 +42,9 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
   html,
   body {
     font-size: 7px;
   }
-}
+} */
