@@ -8,7 +8,13 @@ export default function Navbar({ data }: Props) {
 
   return (
     <nav className="navbar">
-      <div className="logo">
+      <div
+        className="logo"
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+        }}
+      >
         <img src={data.userData?.avatar_url ?? ""} alt="PFP" />
         <h1>{data.userData?.login.toUpperCase()}</h1>
       </div>
