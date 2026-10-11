@@ -9,7 +9,7 @@ export default function Home({ data }: Props) {
         alt="PFP"
         style={{ cursor: "pointer" }}
         onClick={() => {
-          window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+          window.location.href = "https://www.youtube.com/watch?v=9hhMUT2U2L4";
         }}
       />
       <h1>{data.userData?.login.toUpperCase()}</h1>
