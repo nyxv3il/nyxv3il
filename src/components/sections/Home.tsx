@@ -66,8 +66,12 @@ export default function Home({ data }: Props) {
     <section id="home">
       <img
         src={data.userData?.avatar_url ?? ""}
-        alt="PFP"
+        alt="Profile picture"
         className="action"
+        width="360"
+        height="360"
+        decoding="async"
+        fetchPriority="high"
         style={{ cursor: "pointer" }}
         onClick={handlePlay}
       />
@@ -105,6 +109,7 @@ export default function Home({ data }: Props) {
               controls
               playsInline
               loop
+              preload="none"
             />
           </div>,
           document.body
