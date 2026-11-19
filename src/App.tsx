@@ -56,29 +56,37 @@ export default function App() {
     "https://gist.githubusercontent.com/nyxv3il/38d92f277aabd696f0c507ab880cf617/raw/7d8609d57181371efcc85423562a82c22111f5e5/fadsfdsa";
 
   useEffect(() => {
+    const controller = new AbortController();
+    const { signal } = controller;
+
     Promise.all([
-      fetch("https://api.github.com/users/nyxv3il").then((res) => {
+      fetch("https://api.github.com/users/nyxv3il", { signal }).then((res) => {
         if (!res.ok) throw new Error("Failed to load GitHub user data");
         return res.json() as Promise<USER>;
       }),
-      fetch(siteDataFile).then((res) => {
+      fetch(siteDataFile, { signal }).then((res) => {
         if (!res.ok) throw new Error("Failed to load site data");
         return res.json() as Promise<SiteData>;
       }),
-      fetch("https://api.github.com/users/nyxv3il/repos").then((res) => {
-        if (!res.ok) throw new Error("Failed to load GitHug repositories");
+      fetch("https://api.github.com/users/nyxv3il/repos", { signal }).then((res) => {
+        if (!res.ok) throw new Error("Failed to load GitHub repositories");
         return res.json() as Promise<REPO[]>;
       }),
     ])
-      .then(([githubUser, siteJson, repos]) => {
+      .then(([githubUser, siteJson, githubRepos]) => {
         setUserData(githubUser);
         setSiteData(siteJson);
-        setRepos(repos);
+        setRepos(githubRepos);
       })
-      .catch((err) => {
+      .catch((err: unknown) => {
+        if (err instanceof Error && err.name === "AbortError") return;
         setError(err instanceof Error ? err.message : "Failed to load data");
       })
-      .finally(() => setLoading(false));
+      .finally(() => {
+        if (!signal.aborted) setLoading(false);
+      });
+
+    return () => controller.abort();
   }, []);
 
   const data = { siteData, userData, repos };
